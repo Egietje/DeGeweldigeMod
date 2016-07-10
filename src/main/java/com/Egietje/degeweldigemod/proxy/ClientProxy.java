@@ -46,11 +46,16 @@ public class ClientProxy extends CommonProxy {
 		registerItemModel(CheeseItems.CHEESE_HOE, 0);
 		registerItemModel(CheeseItems.CHEESE_FLY_STICK, 0);
 		registerItemModel(CheeseItems.CHEESE_BOW, 0);
+		registerItemModel(CheeseItems.CHEESE_MULTITOOL, 0);
 		
 		registerItemModel(CheeseItems.CHEESE_HELMET, 0);
 		registerItemModel(CheeseItems.CHEESE_CHESTPLATE, 0);
 		registerItemModel(CheeseItems.CHEESE_LEGGINGS, 0);
 		registerItemModel(CheeseItems.CHEESE_BOOTS, 0);
+		
+		registerItemModel(CheeseItems.CHEESE_PICKAXE_HEAD, 0);
+		registerItemModel(CheeseItems.CHEESE_AXE_HEAD, 0);
+		registerItemModel(CheeseItems.CHEESE_SHOVEL_HEAD, 0);
 		
 		registerBlockModel(CheeseBlocks.CHEESE_ORE, 0);
 		registerBlockModel(CheeseBlocks.CHEESE_ORE_NETHER, 0);

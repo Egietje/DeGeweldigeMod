@@ -3,6 +3,7 @@ item.cheese_cooked.name=§eCooked Cheese§r
 item.bread_cheese.name=§eCheese in Bread§r
 item.cheese_apple.name=§eCheese Apple§r
 item.cheese_bucket.name=§eCheese Bucket§r
+item.cheese_seeds.name=§eCheese Seeds§r
 
 item.cheese_ingot.name=§eCheese Ingot§r
 item.cheese_arrow.name=§eCheese Arrow§r
@@ -19,6 +20,11 @@ item.cheese_shovel.name=§eCheese Shovel§r
 item.cheese_hoe.name=§eCheese Hoe§r
 item.cheese_fly_stick.name=§eCheese Fly Stick§r
 item.cheese_bow.name=§eCheese Bow§r
+item.cheese_multitool.name=§eCheese Multitool§r
+
+item.cheese_axe_head.name=§eCheese Axe Head§r
+item.cheese_pickaxe_head.name=§eCheese Pickaxe Head§r
+item.cheese_shovel_head.name=§eCheese Shovel Head§r
 
 itemGroup.tabCheeseStuff=§eCheese Stuff§r
 

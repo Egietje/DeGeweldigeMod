@@ -34,11 +34,16 @@ public class CheeseItems {
 	public static Item CHEESE_HOE;
 	public static Item CHEESE_FLY_STICK;
 	public static Item CHEESE_BOW;
+	public static Item CHEESE_MULTITOOL;
 	
 	public static Item CHEESE_HELMET;
 	public static Item CHEESE_CHESTPLATE;
 	public static Item CHEESE_LEGGINGS;
 	public static Item CHEESE_BOOTS;
+	
+	public static Item CHEESE_PICKAXE_HEAD;
+	public static Item CHEESE_AXE_HEAD;
+	public static Item CHEESE_SHOVEL_HEAD;
 	
 	public static Item CHEESE;
 	public static Item CHEESE_COOKED;
@@ -72,6 +77,11 @@ public class CheeseItems {
 		CHEESE_HOE = new CheeseHoe(cheese_tool_material).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
 		CHEESE_FLY_STICK = new CheeseFlyStick().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
 		CHEESE_BOW = new CheeseBow().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
+		CHEESE_MULTITOOL = new CheeseMultitool(cheese_tool_material, 4671).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
+		
+		CHEESE_PICKAXE_HEAD = new Item().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
+		CHEESE_AXE_HEAD = new Item().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
+		CHEESE_SHOVEL_HEAD = new Item().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
 		
 		CHEESE = new ItemFood(4, 0.8F, false).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
 		CHEESE_COOKED = new ItemFood(7, 1.3F, true).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
@@ -93,6 +103,10 @@ public class CheeseItems {
 		CheeseUtils.setNames(CHEESE_INGOT, "cheese_ingot");
 		CheeseUtils.setNames(CHEESE_ARROW, "cheese_arrow");
 		
+		CheeseUtils.setNames(CHEESE_PICKAXE_HEAD, "cheese_pickaxe_head");
+		CheeseUtils.setNames(CHEESE_AXE_HEAD, "cheese_axe_head");
+		CheeseUtils.setNames(CHEESE_SHOVEL_HEAD, "cheese_shovel_head");
+		
 		CheeseUtils.setNames(CHEESE_SWORD, "cheese_sword");
 		CheeseUtils.setNames(CHEESE_PICKAXE, "cheese_pickaxe");
 		CheeseUtils.setNames(CHEESE_AXE, "cheese_axe");
@@ -100,6 +114,7 @@ public class CheeseItems {
 		CheeseUtils.setNames(CHEESE_HOE, "cheese_hoe");
 		CheeseUtils.setNames(CHEESE_FLY_STICK, "cheese_fly_stick");
 		CheeseUtils.setNames(CHEESE_BOW, "cheese_bow");
+		CheeseUtils.setNames(CHEESE_MULTITOOL, "cheese_multitool");
 		
 		CheeseUtils.setNames(CHEESE_HELMET, "cheese_helmet");
 		CheeseUtils.setNames(CHEESE_CHESTPLATE, "cheese_chestplate");
@@ -115,11 +130,16 @@ public class CheeseItems {
 		GameRegistry.register(CHEESE_HOE);
 		GameRegistry.register(CHEESE_FLY_STICK);
 		GameRegistry.register(CHEESE_BOW);
+		GameRegistry.register(CHEESE_MULTITOOL);
 		
 		GameRegistry.register(CHEESE_HELMET);
 		GameRegistry.register(CHEESE_CHESTPLATE);
 		GameRegistry.register(CHEESE_LEGGINGS);
 		GameRegistry.register(CHEESE_BOOTS);
+		
+		GameRegistry.register(CHEESE_PICKAXE_HEAD);
+		GameRegistry.register(CHEESE_AXE_HEAD);
+		GameRegistry.register(CHEESE_SHOVEL_HEAD);
 		
 		GameRegistry.register(CHEESE);
 		GameRegistry.register(CHEESE_COOKED);
