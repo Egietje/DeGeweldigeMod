@@ -28,7 +28,7 @@ public class CheeseCraftingAndSmelting {
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_PICKAXE), new Object[]{"CCC"," S "," S ",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_HOE), new Object[]{"CC "," S "," S ",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_FLY_STICK), new Object[]{"CCC","CSC"," S ",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK});
-		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_FLY_STICK), new Object[]{"SAP"," T "," T ",'S',CheeseItems.CHEESE_SHOVEL_HEAD,'A',CheeseItems.CHEESE_AXE_HEAD,'P',CheeseItems.CHEESE_PICKAXE_HEAD,'T',Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_FLY_STICK), new Object[]{"ASP"," T "," T ",'S',CheeseItems.CHEESE_SHOVEL_HEAD,'A',CheeseItems.CHEESE_AXE_HEAD,'P',CheeseItems.CHEESE_PICKAXE_HEAD,'T',Items.STICK});
 		
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_SHOVEL_HEAD), new Object[]{" C ",'C',CheeseItems.CHEESE_INGOT});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_AXE_HEAD), new Object[]{"CC ","C  ",'C',CheeseItems.CHEESE_INGOT});
