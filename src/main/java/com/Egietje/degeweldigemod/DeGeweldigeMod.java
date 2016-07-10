@@ -58,8 +58,6 @@ public class DeGeweldigeMod {
 		
 		proxy.registerModels();
 		proxy.renderEntities();
-		
-		Display.setTitle("Minecraft - 1.10.2 | DeGeweldigeMod - " + Reference.VERSION);
 	}
 	
 	@EventHandler

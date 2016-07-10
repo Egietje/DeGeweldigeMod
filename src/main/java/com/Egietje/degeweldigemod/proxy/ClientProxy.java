@@ -1,5 +1,7 @@
 package com.Egietje.degeweldigemod.proxy;
 
+import org.lwjgl.opengl.Display;
+
 import com.Egietje.degeweldigemod.DeGeweldigeMod;
 import com.Egietje.degeweldigemod.Reference;
 import com.Egietje.degeweldigemod.entities.cheesearrow.EntityCheeseArrow;
@@ -68,6 +70,8 @@ public class ClientProxy extends CommonProxy {
 	}
 	
 	public void registerEventHandler() {
+		Display.setTitle("Minecraft - 1.10.2 | DeGeweldigeMod - " + Reference.VERSION);
+		
 		MinecraftForge.EVENT_BUS.register(new CheeseClientHandler());
 	}
 	
