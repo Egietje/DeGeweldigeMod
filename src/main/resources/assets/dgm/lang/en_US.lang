@@ -1,0 +1,40 @@
+item.cheese.name=§eCheese§r
+item.cheese_cooked.name=§eCooked Cheese§r
+item.bread_cheese.name=§eCheese in Bread§r
+item.cheese_apple.name=§eCheese Apple§r
+item.cheese_bucket.name=§eCheese Bucket§r
+
+item.cheese_ingot.name=§eCheese Ingot§r
+item.cheese_arrow.name=§eCheese Arrow§r
+
+item.cheese_helmet.name=§eCheese Helmet§r
+item.cheese_chestplate.name=§eCheese Chestplate§r
+item.cheese_leggings.name=§eCheese Leggings§r
+item.cheese_boots.name=§eCheese Boots§r
+
+item.cheese_sword.name=§eCheese Sword§r
+item.cheese_axe.name=§eCheese Axe§r
+item.cheese_pickaxe.name=§eCheese Pickaxe§r
+item.cheese_shovel.name=§eCheese Shovel§r
+item.cheese_hoe.name=§eCheese Hoe§r
+item.cheese_fly_stick.name=§eCheese Fly Stick§r
+item.cheese_bow.name=§eCheese Bow§r
+
+itemGroup.tabCheeseStuff=§eCheese Stuff§r
+
+tile.cheese_ore_end.name=§eCheese Ore§r
+tile.cheese_ore_nether.name=§eCheese Ore§r
+tile.cheese_ore.name=§eCheese Ore§r
+tile.cheese_block.name=§eCheese Block§r
+tile.quick_cheese.name=§eQuick Cheese§r
+tile.compliment_machine.name=§eCompliment Machine§r
+tile.belgium_flag.name=§0Be§r§elgi§r§4um §r§eFlag§r
+tile.cheese_crafting_table.name=§eCheese Crafting Table§r
+
+achievement.join=§eJoined§r
+achievement.join.desc=§6Join the world!§r
+achievement.fly=§eFLY!§r
+achievement.fly.desc=§6Fly with the fly stick§r
+
+entity.dgm.CheeseCow.name=§eCheese Cow§r
+entity.dgm.CheeseArrow.name=§eCheese Arrow§r
