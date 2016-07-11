@@ -2,11 +2,8 @@ package com.Egietje.degeweldigemod;
 
 import org.lwjgl.opengl.Display;
 
+import com.Egietje.degeweldigemod.entities.CheeseMobs;
 import com.Egietje.degeweldigemod.entities.CheeseSpawnPlacementRegistry;
-import com.Egietje.degeweldigemod.entities.cheesearrow.EntityCheeseArrow;
-import com.Egietje.degeweldigemod.entities.cheesecow.EntityCheeseCow;
-import com.Egietje.degeweldigemod.entities.cheesecow.ModelCheeseCow;
-import com.Egietje.degeweldigemod.entities.cheesecow.RenderCheeseCow;
 import com.Egietje.degeweldigemod.handler.CheeseCommonHandler;
 import com.Egietje.degeweldigemod.init.CheeseAchievements;
 import com.Egietje.degeweldigemod.init.CheeseBlocks;
@@ -47,12 +44,9 @@ public class DeGeweldigeMod {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		registerModEntityWithEgg(EntityCheeseCow.class, "CheeseCow", 0x917B1B, 0x8E814E, 250);
-		EntityRegistry.addSpawn(EntityCheeseCow.class, 8, 4, 4, EnumCreatureType.CREATURE, Biomes.PLAINS);
-		EntityRegistry.registerModEntity(EntityCheeseArrow.class, "CheeseArrow", 251, this.DGMInstance, 64, 1, true);
-		
 		new CheeseBlocks();
 		new CheeseItems();
+		new CheeseMobs();
 		new CheeseAchievements();
 		new CheeseSpawnPlacementRegistry();
 		
@@ -71,10 +65,5 @@ public class DeGeweldigeMod {
 	
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {
-	}
-	
-	public void registerModEntityWithEgg(Class entityClass, String entityName, int eggColor, int eggSpotsColor, int entityID) {
-    EntityRegistry.registerModEntity(entityClass, entityName, entityID, this.DGMInstance, 80, 3, false);
-    EntityRegistry.registerEgg(entityClass, eggColor, eggSpotsColor);
 	}
 }
