@@ -1,11 +1,14 @@
-package com.Egietje.degeweldigemod.entities;
+package com.Egietje.degeweldigemod.init;
 
 import com.Egietje.degeweldigemod.DeGeweldigeMod;
 import com.Egietje.degeweldigemod.entities.cheesearrow.EntityCheeseArrow;
 import com.Egietje.degeweldigemod.entities.cheesecow.EntityCheeseCow;
 
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Biomes;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class CheeseMobs {
@@ -28,5 +31,4 @@ public class CheeseMobs {
 	    EntityRegistry.registerModEntity(entityClass, entityName, entityID, DeGeweldigeMod.DGMInstance, 80, 3, false);
 	    EntityRegistry.registerEgg(entityClass, eggColor, eggSpotsColor);
 	}
-	
 }
