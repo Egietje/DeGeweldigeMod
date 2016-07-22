@@ -1,5 +1,10 @@
 package com.Egietje.degeweldigemod.proxy;
 
+import java.io.File;
+import java.nio.ByteBuffer;
+
+import javax.imageio.ImageIO;
+
 import org.lwjgl.opengl.Display;
 
 import com.Egietje.degeweldigemod.DeGeweldigeMod;
@@ -11,6 +16,8 @@ import com.Egietje.degeweldigemod.handler.CheeseClientHandler;
 import com.Egietje.degeweldigemod.handler.CheeseCommonHandler;
 import com.Egietje.degeweldigemod.init.CheeseBlocks;
 import com.Egietje.degeweldigemod.init.CheeseItems;
+import com.sun.javafx.iio.ImageMetadata;
+import com.sun.scenario.effect.ImageData;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -20,6 +27,7 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;

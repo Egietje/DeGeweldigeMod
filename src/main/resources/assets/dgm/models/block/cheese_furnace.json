@@ -2,7 +2,7 @@
     "parent": "block/orientable",
     "textures": {
         "top": "dgm:blocks/cheese_furnace_top",
-        "side": "dgm:blocks/cheese_furnace_side",
-		"front": "dgm:blocks/cheese_front_off",
+        "front": "dgm:blocks/cheese_furnace_front_off",
+        "side": "dgm:blocks/cheese_furnace_side"
     }
 }
