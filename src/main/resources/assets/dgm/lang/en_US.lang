@@ -28,6 +28,8 @@ item.cheese_shovel_head.name=§eCheese Shovel Head§r
 
 itemGroup.tabCheeseStuff=§eCheese Stuff§r
 
+container.cheese_furnace=§eCheese Furnace§r
+
 tile.cheese_ore_end.name=§eCheese Ore§r
 tile.cheese_ore_nether.name=§eCheese Ore§r
 tile.cheese_ore.name=§eCheese Ore§r
@@ -36,6 +38,8 @@ tile.quick_cheese.name=§eQuick Cheese§r
 tile.compliment_machine.name=§eCompliment Machine§r
 tile.belgium_flag.name=§0Be§r§elgi§r§4um §r§eFlag§r
 tile.cheese_crafting_table.name=§eCheese Crafting Table§r
+tile.cheese_furnace.name=§eCheese Furnace§r
+tile.lit_cheese_furnace.name=§eLit Cheese Furnace§r
 
 achievement.join=§eJoined§r
 achievement.join.desc=§6Join the world!§r

@@ -3,6 +3,7 @@ package com.Egietje.degeweldigemod.init;
 import com.Egietje.degeweldigemod.DeGeweldigeMod;
 import com.Egietje.degeweldigemod.entities.cheesearrow.EntityCheeseArrow;
 import com.Egietje.degeweldigemod.entities.cheesecow.EntityCheeseCow;
+import com.Egietje.degeweldigemod.entities.tileentities.blocks.furnace.TileEntityCheeseFurnace;
 
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EnumCreatureType;
@@ -10,6 +11,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Biomes;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CheeseMobs {
 	
@@ -19,6 +21,7 @@ public class CheeseMobs {
 	}
 	
 	public void register() {
+		GameRegistry.registerTileEntity(TileEntityCheeseFurnace.class, "CheeseFurnace");
 		registerModEntityWithEgg(EntityCheeseCow.class, "CheeseCow", 0x917B1B, 0x8E814E, 250);
 		EntityRegistry.registerModEntity(EntityCheeseArrow.class, "CheeseArrow", 251, DeGeweldigeMod.DGMInstance, 64, 1, true);
 	}

@@ -24,6 +24,8 @@ public class CheeseBlocks {
 	public static Block COMPLIMENT_MACHINE;
 	public static Block BELGIUM_FLAG;
 	public static Block CHEESE_PLANT;
+	public static Block CHEESE_FURNACE;
+	public static Block LIT_CHEESE_FURNACE;
 	
 	public CheeseBlocks() {
 		init();
@@ -39,6 +41,8 @@ public class CheeseBlocks {
 		COMPLIMENT_MACHINE = new ComplimentsMachine().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(3F);
 		BELGIUM_FLAG = new BelgiumFlag().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
 		CHEESE_PLANT = new CheesePlant();
+		CHEESE_FURNACE = new CheeseFurnace(false).setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);;
+		LIT_CHEESE_FURNACE = new CheeseFurnace(true).setHardness(2F);
 		
 		CheeseUtils.setNames(CHEESE_ORE, "cheese_ore");
 		CheeseUtils.setNames(CHEESE_ORE_NETHER, "cheese_ore_nether");
@@ -48,6 +52,8 @@ public class CheeseBlocks {
 		CheeseUtils.setNames(COMPLIMENT_MACHINE, "compliment_machine");
 		CheeseUtils.setNames(BELGIUM_FLAG, "belgium_flag");
 		CheeseUtils.setNames(CHEESE_PLANT, "cheese_plant");
+		CheeseUtils.setNames(CHEESE_FURNACE, "cheese_furnace");
+		CheeseUtils.setNames(LIT_CHEESE_FURNACE, "lit_cheese_furnace");
 	}	
 	
 	public void register() {
@@ -59,6 +65,8 @@ public class CheeseBlocks {
 		this.registerBlock(COMPLIMENT_MACHINE);
 		this.registerBlock(BELGIUM_FLAG);
 		this.registerBlock(CHEESE_PLANT);
+		this.registerBlock(CHEESE_FURNACE);
+		this.registerBlock(LIT_CHEESE_FURNACE);
 	}	
 	
 	private void registerBlock(Block block) {

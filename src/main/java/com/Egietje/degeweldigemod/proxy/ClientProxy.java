@@ -67,6 +67,8 @@ public class ClientProxy extends CommonProxy {
 		registerBlockModel(CheeseBlocks.COMPLIMENT_MACHINE, 0);
 		registerBlockModel(CheeseBlocks.BELGIUM_FLAG, 0);
 		registerBlockModel(CheeseBlocks.CHEESE_PLANT, 0);
+		registerBlockModel(CheeseBlocks.CHEESE_FURNACE, 0);
+		registerBlockModel(CheeseBlocks.LIT_CHEESE_FURNACE, 0);
 	}
 	
 	public void registerEventHandler() {
