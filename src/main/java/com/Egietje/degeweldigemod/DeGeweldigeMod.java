@@ -1,17 +1,9 @@
 package com.Egietje.degeweldigemod;
 
-import org.lwjgl.opengl.Display;
-
-import com.Egietje.degeweldigemod.entities.CheeseSpawnPlacementRegistry;
-import com.Egietje.degeweldigemod.handler.CheeseCommonHandler;
-import com.Egietje.degeweldigemod.init.CheeseAchievements;
-import com.Egietje.degeweldigemod.init.CheeseBlocks;
-import com.Egietje.degeweldigemod.init.CheeseCraftingAndSmelting;
-import com.Egietje.degeweldigemod.init.CheeseGeneration;
-import com.Egietje.degeweldigemod.init.CheeseItems;
-import com.Egietje.degeweldigemod.init.CheeseMobs;
-import com.Egietje.degeweldigemod.init.CheeseTab;
-import com.Egietje.degeweldigemod.proxy.CommonProxy;
+import com.Egietje.degeweldigemod.entities.*;
+import com.Egietje.degeweldigemod.handler.*;
+import com.Egietje.degeweldigemod.init.*;
+import com.Egietje.degeweldigemod.proxy.*;
 
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityLiving;
