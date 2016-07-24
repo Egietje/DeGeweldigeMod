@@ -41,7 +41,6 @@ public class DeGeweldigeMod {
 		new CheeseMobs();
 		new CheeseAchievements();
 		new CheeseSpawnPlacementRegistry();
-		//Push to github
 		proxy.registerModels();
 		proxy.renderEntities();
 	}
