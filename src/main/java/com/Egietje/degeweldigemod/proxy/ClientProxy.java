@@ -9,6 +9,7 @@ import org.lwjgl.opengl.Display;
 
 import com.Egietje.degeweldigemod.DeGeweldigeMod;
 import com.Egietje.degeweldigemod.Reference;
+import com.Egietje.degeweldigemod.entities.LayerCheeseEars;
 import com.Egietje.degeweldigemod.entities.cheesearrow.EntityCheeseArrow;
 import com.Egietje.degeweldigemod.entities.cheesearrow.RenderingHandlerCheeseArrow;
 import com.Egietje.degeweldigemod.entities.cheesecow.*;
@@ -24,6 +25,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderPlayer;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
 import net.minecraft.item.Item;
@@ -37,6 +39,8 @@ import net.minecraftforge.fml.relauncher.Side;
 
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
+	
+	private RenderPlayer playerRenderer;
 	
 	public void registerModels() {
 		registerItemModel(CheeseItems.CHEESE, 0);
@@ -83,6 +87,8 @@ public class ClientProxy extends CommonProxy {
 		Display.setTitle("Minecraft - 1.10.2 | DeGeweldigeMod - " + Reference.VERSION);
 		
 		MinecraftForge.EVENT_BUS.register(new CheeseClientHandler());
+		
+		playerRenderer.addLayer(new LayerCheeseEars(playerRenderer));
 	}
 	
 	public void renderEntities() {
