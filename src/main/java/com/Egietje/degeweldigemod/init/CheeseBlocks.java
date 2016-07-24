@@ -5,6 +5,7 @@ import com.Egietje.degeweldigemod.Reference;
 import com.Egietje.degeweldigemod.blocks.*;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPortal;
 import net.minecraft.block.BlockWorkbench;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -41,7 +42,7 @@ public class CheeseBlocks {
 		COMPLIMENT_MACHINE = new ComplimentsMachine().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(3F);
 		BELGIUM_FLAG = new BelgiumFlag().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
 		CHEESE_PLANT = new CheesePlant();
-		CHEESE_FURNACE = new CheeseFurnace(false).setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);;
+		CHEESE_FURNACE = new CheeseFurnace(false).setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
 		LIT_CHEESE_FURNACE = new CheeseFurnace(true).setHardness(2F);
 		
 		CheeseUtils.setNames(CHEESE_ORE, "cheese_ore");

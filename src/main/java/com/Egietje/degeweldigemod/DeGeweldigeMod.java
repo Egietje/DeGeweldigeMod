@@ -1,5 +1,6 @@
 package com.Egietje.degeweldigemod;
 
+import com.Egietje.degeweldigemod.biome.WorldTypeCheese;
 import com.Egietje.degeweldigemod.entities.*;
 import com.Egietje.degeweldigemod.handler.*;
 import com.Egietje.degeweldigemod.init.*;
@@ -11,6 +12,7 @@ import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.init.Biomes;
+import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -41,6 +43,7 @@ public class DeGeweldigeMod {
 		new CheeseMobs();
 		new CheeseAchievements();
 		new CheeseSpawnPlacementRegistry();
+		new CheeseBiomes();
 		proxy.registerModels();
 		proxy.renderEntities();
 	}
@@ -56,5 +59,6 @@ public class DeGeweldigeMod {
 	
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {
+		WorldType CHEESE = new WorldTypeCheese(4, "Cheese");
 	}
 }
