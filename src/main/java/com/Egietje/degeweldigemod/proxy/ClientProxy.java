@@ -2,6 +2,7 @@ package com.Egietje.degeweldigemod.proxy;
 
 import java.io.File;
 import java.nio.ByteBuffer;
+import java.util.Map;
 
 import javax.imageio.ImageIO;
 
@@ -17,6 +18,7 @@ import com.Egietje.degeweldigemod.handler.CheeseClientHandler;
 import com.Egietje.degeweldigemod.handler.CheeseCommonHandler;
 import com.Egietje.degeweldigemod.init.CheeseBlocks;
 import com.Egietje.degeweldigemod.init.CheeseItems;
+import com.google.common.collect.Maps;
 import com.sun.javafx.iio.ImageMetadata;
 import com.sun.scenario.effect.ImageData;
 
@@ -40,6 +42,7 @@ import net.minecraftforge.fml.relauncher.Side;
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
 	
+	private final Map<String, RenderPlayer> skinMap = Maps.<String, RenderPlayer>newHashMap();
 	private RenderPlayer playerRenderer;
 	
 	public void registerModels() {
