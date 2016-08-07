@@ -20,6 +20,8 @@ import net.minecraft.util.text.TextFormatting;
 
 @SideOnly(Side.CLIENT)
 public class CheeseClientHandler {
+	
+	
 	@SubscribeEvent
 	public void onPlayerJoin(PlayerLoggedInEvent event) {
 		EntityPlayer player = event.player;

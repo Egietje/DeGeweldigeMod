@@ -55,5 +55,4 @@ public class CheeseGeneration implements IWorldGenerator {
 			gen.generate(world, random, orePos);
 		}
 	}
-
 }

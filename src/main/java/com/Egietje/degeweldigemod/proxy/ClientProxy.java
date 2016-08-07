@@ -1,7 +1,9 @@
 package com.Egietje.degeweldigemod.proxy;
 
 import java.io.File;
+import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
+import java.util.Hashtable;
 import java.util.Map;
 
 import javax.imageio.ImageIO;
@@ -19,19 +21,24 @@ import com.Egietje.degeweldigemod.handler.CheeseCommonHandler;
 import com.Egietje.degeweldigemod.init.CheeseBlocks;
 import com.Egietje.degeweldigemod.init.CheeseItems;
 import com.google.common.collect.Maps;
+import com.mojang.authlib.GameProfile;
 import com.sun.javafx.iio.ImageMetadata;
 import com.sun.scenario.effect.ImageData;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.entity.RenderPlayer;
+import net.minecraft.client.resources.SkinManager;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Biomes;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
@@ -41,9 +48,6 @@ import net.minecraftforge.fml.relauncher.Side;
 
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
-	
-	private final Map<String, RenderPlayer> skinMap = Maps.<String, RenderPlayer>newHashMap();
-	private RenderPlayer playerRenderer;
 	
 	public void registerModels() {
 		registerItemModel(CheeseItems.CHEESE, 0);
@@ -84,14 +88,13 @@ public class ClientProxy extends CommonProxy {
 		registerBlockModel(CheeseBlocks.CHEESE_PLANT, 0);
 		registerBlockModel(CheeseBlocks.CHEESE_FURNACE, 0);
 		registerBlockModel(CheeseBlocks.LIT_CHEESE_FURNACE, 0);
+		registerBlockModel(CheeseBlocks.CHEESE_CRAFTING_TABLE, 0);
 	}
 	
 	public void registerEventHandler() {
 		Display.setTitle("Minecraft - 1.10.2 | DeGeweldigeMod - " + Reference.VERSION);
 		
 		MinecraftForge.EVENT_BUS.register(new CheeseClientHandler());
-		
-		playerRenderer.addLayer(new LayerCheeseEars(playerRenderer));
 	}
 	
 	public void renderEntities() {
