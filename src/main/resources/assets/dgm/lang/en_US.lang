@@ -47,6 +47,7 @@ achievement.fly=§eFLY!§r
 achievement.fly.desc=§6Fly with the fly stick§r
 
 entity.dgm.CheeseCow.name=§eCheese Cow§r
+entity.dgm.CheeseChicken.name=§eCheese Chicken§r
 entity.dgm.CheeseArrow.name=§eCheese Arrow§r
 
 generator.Cheese=§eCheese§r

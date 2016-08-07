@@ -50,11 +50,18 @@ public class QuickCheese extends Block {
 	protected boolean canSilkHarvest() {
 		return true;
 	}
-
-	@SideOnly(Side.CLIENT)
+	
 	public BlockRenderLayer getBlockLayer() {
-		return BlockRenderLayer.SOLID;
+		return BlockRenderLayer.CUTOUT;
 	}
+	
+	public boolean isFullCube(IBlockState state) {
+        return false;
+    }
+	
+	public boolean isOpaqueCube(IBlockState state) {
+        return false;
+    }
 
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, @Nullable ItemStack stack) {
 		if (!worldIn.isRemote && stack != null && stack.getItem() == CheeseItems.CHEESE_SHOVEL) {

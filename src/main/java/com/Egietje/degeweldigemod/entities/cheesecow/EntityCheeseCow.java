@@ -51,7 +51,7 @@ public class EntityCheeseCow extends EntityAnimal {
 	
 	@Override
 	public boolean isBreedingItem(@Nullable ItemStack stack) {
-        return stack == null ? false : stack.getItem() == CheeseItems.CHEESE;
+        return stack != null && stack.getItem() == CheeseItems.CHEESE;
     }
 
 	protected void applyEntityAttributes() {
