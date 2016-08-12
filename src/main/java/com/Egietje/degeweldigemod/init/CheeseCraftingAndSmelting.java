@@ -14,6 +14,9 @@ public class CheeseCraftingAndSmelting {
 	private void register() {
 		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_BLOCK), new Object[]{"CCC","CCC","CCC",'C',CheeseItems.CHEESE});
 		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.BELGIUM_FLAG), new Object[]{"BYR","S  ","LLL",'L',new ItemStack(Blocks.STONE_SLAB, 1, 0),'S',Items.STICK,'B',new ItemStack(Items.DYE, 1, 0),'Y',new ItemStack(Items.DYE, 1, 11),'R',new ItemStack(Items.DYE, 1, 1)});
+		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_FURNACE), new Object[]{"CCC","CFC","CCC",'C',CheeseItems.CHEESE_INGOT,'F',Blocks.FURNACE});
+		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_CRAFTING_TABLE), new Object[]{"CCC","CWC","CCC",'C',CheeseItems.CHEESE_INGOT,'W',Blocks.CRAFTING_TABLE});
+		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_COOKIE_BLOCK), new Object[]{"CCC","CBC","CCC",'C',Items.COOKIE,'B',CheeseBlocks.CHEESE_BLOCK});
 		
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.BREAD_CHEESE), new Object[]{" B "," C "," B ",'C',CheeseItems.CHEESE,'B',Items.BREAD});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE, 9), new Object[]{"C",'C',CheeseBlocks.CHEESE_BLOCK});

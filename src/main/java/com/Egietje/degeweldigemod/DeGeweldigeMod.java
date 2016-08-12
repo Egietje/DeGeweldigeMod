@@ -23,6 +23,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -51,8 +52,9 @@ public class DeGeweldigeMod {
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
 		new CheeseCraftingAndSmelting();
-
+		
 		proxy.registerEventHandler();
+		NetworkRegistry.INSTANCE.registerGuiHandler(DGMInstance, new CheeseGuiHandler());
 		
 		GameRegistry.registerWorldGenerator(new CheeseGeneration(), 0);
 	}

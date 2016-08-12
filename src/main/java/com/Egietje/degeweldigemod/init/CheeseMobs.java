@@ -2,7 +2,6 @@ package com.Egietje.degeweldigemod.init;
 
 import com.Egietje.degeweldigemod.DeGeweldigeMod;
 import com.Egietje.degeweldigemod.entities.cheesearrow.EntityCheeseArrow;
-import com.Egietje.degeweldigemod.entities.cheesechicken.EntityCheeseChicken;
 import com.Egietje.degeweldigemod.entities.cheesecow.EntityCheeseCow;
 import com.Egietje.degeweldigemod.entities.tileentities.blocks.furnace.TileEntityCheeseFurnace;
 import com.google.common.base.Predicates;
@@ -26,12 +25,10 @@ public class CheeseMobs {
 	public void register() {
 		GameRegistry.registerTileEntity(TileEntityCheeseFurnace.class, "CheeseFurnace");
 		EntityRegistry.registerModEntity(EntityCheeseCow.class, "CheeseCow", 250, DeGeweldigeMod.DGMInstance, 80, 1, false, 0x917B1B, 0x8E814E);
-		EntityRegistry.registerModEntity(EntityCheeseChicken.class, "CheeseChicken", 251, DeGeweldigeMod.DGMInstance, 80, 1, false, 0x917B1B, 0x8E814E);
-		EntityRegistry.registerModEntity(EntityCheeseArrow.class, "CheeseArrow", 252, DeGeweldigeMod.DGMInstance, 64, 1, true);
+		EntityRegistry.registerModEntity(EntityCheeseArrow.class, "CheeseArrow", 251, DeGeweldigeMod.DGMInstance, 64, 1, true);
 	}
 	
 	public void addSpawn() {
 		EntityRegistry.addSpawn(EntityCheeseCow.class, 8, 4, 4, EnumCreatureType.CREATURE, Biomes.PLAINS);
-		EntityRegistry.addSpawn(EntityCheeseChicken.class, 13, 2, 5, EnumCreatureType.CREATURE, Biomes.PLAINS);
 	}
 }

@@ -16,6 +16,7 @@ public class CommonProxy {
 	
 	public void registerEventHandler() {
 		MinecraftForge.EVENT_BUS.register(new CheeseCommonHandler());
+		
 	}
 	
 }

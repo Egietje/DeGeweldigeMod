@@ -13,8 +13,6 @@ import org.lwjgl.opengl.Display;
 import com.Egietje.degeweldigemod.DeGeweldigeMod;
 import com.Egietje.degeweldigemod.Reference;
 import com.Egietje.degeweldigemod.entities.cheesearrow.*;
-import com.Egietje.degeweldigemod.entities.cheesechicken.EntityCheeseChicken;
-import com.Egietje.degeweldigemod.entities.cheesechicken.RenderingHandlerCheeseChicken;
 import com.Egietje.degeweldigemod.entities.cheesecow.*;
 import com.Egietje.degeweldigemod.handler.CheeseClientHandler;
 import com.Egietje.degeweldigemod.handler.CheeseCommonHandler;
@@ -89,6 +87,7 @@ public class ClientProxy extends CommonProxy {
 		registerBlockModel(CheeseBlocks.CHEESE_FURNACE, 0);
 		registerBlockModel(CheeseBlocks.LIT_CHEESE_FURNACE, 0);
 		registerBlockModel(CheeseBlocks.CHEESE_CRAFTING_TABLE, 0);
+		registerBlockModel(CheeseBlocks.CHEESE_COOKIE_BLOCK, 0);
 	}
 	
 	public void registerEventHandler() {
@@ -99,7 +98,6 @@ public class ClientProxy extends CommonProxy {
 	
 	public void renderEntities() {
 		RenderingRegistry.registerEntityRenderingHandler(EntityCheeseCow.class, new RenderingHandlerCheeseCow());
-		RenderingRegistry.registerEntityRenderingHandler(EntityCheeseChicken.class, new RenderingHandlerCheeseChicken());
 		RenderingRegistry.registerEntityRenderingHandler(EntityCheeseArrow.class, new RenderingHandlerCheeseArrow());
 	}
 	

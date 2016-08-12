@@ -28,6 +28,7 @@ public class CheeseBlocks {
 	public static Block CHEESE_FURNACE;
 	public static Block LIT_CHEESE_FURNACE;
 	public static Block CHEESE_CRAFTING_TABLE;
+	public static Block CHEESE_COOKIE_BLOCK;
 	
 	public CheeseBlocks() {
 		init();
@@ -46,6 +47,7 @@ public class CheeseBlocks {
 		CHEESE_FURNACE = new CheeseFurnace(false).setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
 		LIT_CHEESE_FURNACE = new CheeseFurnace(true).setHardness(2F);
 		CHEESE_CRAFTING_TABLE = new CheeseWorkbench().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
+		CHEESE_COOKIE_BLOCK = new CheeseCookieBlock().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
 		
 		CheeseUtils.setNames(CHEESE_ORE, "cheese_ore");
 		CheeseUtils.setNames(CHEESE_ORE_NETHER, "cheese_ore_nether");
@@ -58,6 +60,7 @@ public class CheeseBlocks {
 		CheeseUtils.setNames(CHEESE_FURNACE, "cheese_furnace");
 		CheeseUtils.setNames(LIT_CHEESE_FURNACE, "lit_cheese_furnace");
 		CheeseUtils.setNames(CHEESE_CRAFTING_TABLE, "cheese_crafting_table");
+		CheeseUtils.setNames(CHEESE_COOKIE_BLOCK, "cheese_cookie_block");
 	}	
 	
 	public void register() {
@@ -72,6 +75,7 @@ public class CheeseBlocks {
 		this.registerBlock(CHEESE_FURNACE);
 		this.registerBlock(LIT_CHEESE_FURNACE);
 		this.registerBlock(CHEESE_CRAFTING_TABLE);
+		this.registerBlock(CHEESE_COOKIE_BLOCK);
 	}	
 	
 	private void registerBlock(Block block) {

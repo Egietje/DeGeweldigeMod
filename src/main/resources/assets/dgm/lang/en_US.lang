@@ -40,6 +40,7 @@ tile.belgium_flag.name=§0Be§r§elgi§r§4um §r§eFlag§r
 tile.cheese_crafting_table.name=§eCheese Crafting Table§r
 tile.cheese_furnace.name=§eCheese Furnace§r
 tile.lit_cheese_furnace.name=§eLit Cheese Furnace§r
+tile.cheese_cookie_block.name=§eCheese Cookie Block§r
 
 achievement.join=§eJoined§r
 achievement.join.desc=§6Join the world!§r
