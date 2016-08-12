@@ -2,6 +2,7 @@ package com.Egietje.degeweldigemod.gui;
 
 import java.io.IOException;
 
+import javafx.scene.paint.Color;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiScreen;
@@ -16,10 +17,12 @@ import net.minecraftforge.fml.client.config.GuiSlider;
 public class CheeseCookieGui extends GuiScreen {
 	
 	public GuiSlider cookies;
-	
+	public boolean slider = false;
 	@Override
 	public void initGui() {
+		slider = false;
 		buttonList.add(new GuiButtonExt(1, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Goed geopend!"));
+		cookies = new GuiSlider(8, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Ik wil ", " koekjes", 1, 10, 5, true, true);
 	}
 	
 	@Override
@@ -50,8 +53,9 @@ public class CheeseCookieGui extends GuiScreen {
 			break;
 		case 6 :
 			buttonList.removeAll(buttonList);
-			buttonList.add(cookies = new GuiSlider(8, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Ik wil ", " koekjes(" + String.valueOf(cookies.getValueInt()) + ")", 1, 10, 5, true, true));
+			buttonList.add(cookies);
 			buttonList.add(new GuiButtonExt(10, width / 2 - 100, height / 4 + 72 + -16, 200, 20, "Ok"));
+			slider = true;
 			break;
 		case 7 :
 			buttonList.removeAll(buttonList);
@@ -67,6 +71,7 @@ public class CheeseCookieGui extends GuiScreen {
 			break;
 		case 10 :
 			buttonList.removeAll(buttonList);
+			slider = false;
 			if(!Minecraft.getMinecraft().thePlayer.isCreative()) {
 				if(Minecraft.getMinecraft().thePlayer.experienceLevel > 3 * cookies.getValueInt()) {
 					Minecraft.getMinecraft().thePlayer.inventory.addItemStackToInventory(new ItemStack(Items.COOKIE, cookies.getValueInt()));
@@ -81,5 +86,13 @@ public class CheeseCookieGui extends GuiScreen {
 			}
 			break;
 		}
+	}
+	
+	@Override
+	public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+		if(slider) {
+			drawCenteredString(fontRendererObj, "Je krijgt " + String.valueOf(cookies.getValueInt()) + " koekjes, dat is " + String.valueOf(cookies.getValueInt() * 3) + " XP levels" , width / 2, height / 4 + 102 + -16, 0xFFFFFF);
+		}
+		super.drawScreen(mouseX, mouseY, partialTicks);
 	}
 }
