@@ -4,6 +4,8 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.Egietje.degeweldigemod.DeGeweldigeMod;
+import com.Egietje.degeweldigemod.handler.CheeseGuiHandler;
 import com.Egietje.degeweldigemod.init.CheeseItems;
 
 import net.minecraft.block.Block;
@@ -23,10 +25,10 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.ILockableContainer;
 import net.minecraft.world.World;
 
-public class ComplimentsMachine extends Block {
+public class ComplimentMachine extends Block {
 	public Random random = new Random();
 
-	public ComplimentsMachine() {
+	public ComplimentMachine() {
 		super(Material.PISTON);
 	}
 
@@ -36,96 +38,18 @@ public class ComplimentsMachine extends Block {
 		Item holdingItem = playerIn.getHeldItemMainhand() != null ? playerIn.getHeldItemMainhand().getItem() : null;
 		if (playerIn.isCreative()) {
 			if (worldIn.isRemote) {
+				playerIn.openGui(DeGeweldigeMod.DGMInstance, CheeseGuiHandler.COMPLIMENTGUIID, worldIn, pos.getX(), pos.getY(), pos.getZ());
 				return true;
-			} else {
-				if (compliment == 0) {
-					playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD +" is AWESOME." + TextFormatting.RESET));
-				} else {
-					if (compliment == 1) {
-						playerIn.addChatMessage(new TextComponentString(TextFormatting.GOLD + "I love " + TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD +  "." + TextFormatting.RESET));
-					} else {
-						if (compliment == 2) {
-							playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is nice." + TextFormatting.RESET));
-						} else {
-							if (compliment == 3) {
-								playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is my BFF." + TextFormatting.RESET));
-							} else {
-								if (compliment == 4) {
-									playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is the best cheese." + TextFormatting.RESET));
-								} else {
-									if (compliment == 5) {
-										playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is perfect." + TextFormatting.RESET));
-									} else {
-										if (compliment == 6) {
-											playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " will win every contest." + TextFormatting.RESET));
-										} else {
-											if (compliment == 7) {
-												playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is strong." + TextFormatting.RESET));
-											} else {
-												return true;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
 			}
 		}
 		if (!playerIn.isCreative()) {
-			if (worldIn.isRemote) {
+			if (worldIn.isRemote && holdingItem != null && holdingItem == CheeseItems.CHEESE) {
+				playerIn.openGui(DeGeweldigeMod.DGMInstance, CheeseGuiHandler.COMPLIMENTGUIID, worldIn, pos.getX(), pos.getY(), pos.getZ());
 				return true;
-			} else {
-				if (compliment == 0 && holdingItem == CheeseItems.CHEESE) {
-					playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD +" is AWESOME." + TextFormatting.RESET));
-					removeItem(playerIn);
-					playerIn.addExperience(14);
-				} else {
-					if (compliment == 1 && holdingItem == CheeseItems.CHEESE) {
-						playerIn.addChatMessage(new TextComponentString(TextFormatting.GOLD + "I love " + TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD +  "." + TextFormatting.RESET));
-						removeItem(playerIn);
-						playerIn.addExperience(14);
-					} else {
-						if (compliment == 2 && holdingItem == CheeseItems.CHEESE) {
-							playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is nice." + TextFormatting.RESET));
-							removeItem(playerIn);
-							playerIn.addExperience(14);
-						} else {
-							if (compliment == 3 && holdingItem == CheeseItems.CHEESE) {
-								playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is my BFF." + TextFormatting.RESET));
-								removeItem(playerIn);
-								playerIn.addExperience(14);
-							} else {
-								if (compliment == 4 && holdingItem == CheeseItems.CHEESE) {
-									playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is the best cheese." + TextFormatting.RESET));
-									removeItem(playerIn);
-									playerIn.addExperience(14);
-								} else {
-									if (compliment == 5 && holdingItem == CheeseItems.CHEESE) {
-										playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is perfect." + TextFormatting.RESET));
-										removeItem(playerIn);
-										playerIn.addExperience(14);
-									} else {
-										if (compliment == 6 && holdingItem == CheeseItems.CHEESE) {
-											playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " will win every contest." + TextFormatting.RESET));
-											removeItem(playerIn);
-											playerIn.addExperience(14);
-										} else {
-											if (compliment == 7 && holdingItem == CheeseItems.CHEESE) {
-												playerIn.addChatMessage(new TextComponentString(TextFormatting.YELLOW + playerIn.getDisplayNameString() + TextFormatting.GOLD + " is strong." + TextFormatting.RESET));
-												removeItem(playerIn);
-												playerIn.addExperience(14);
-											} else {
-												return true;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
+			} else if(holdingItem != null && holdingItem == CheeseItems.CHEESE){
+				removeItem(playerIn);
+				playerIn.addExperience(14);
+				
 			}
 		}
 		return true;
