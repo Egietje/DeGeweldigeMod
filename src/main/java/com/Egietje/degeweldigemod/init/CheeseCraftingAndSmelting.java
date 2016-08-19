@@ -24,7 +24,7 @@ public class CheeseCraftingAndSmelting {
 		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_FURNACE), new Object[]{"CCC","CFC","CCC",'C',CheeseItems.CHEESE_INGOT,'F',Blocks.FURNACE});
 		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_CRAFTING_TABLE), new Object[]{"CC","CC",'C',CheeseItems.CHEESE_INGOT});
 		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_COOKIE_BLOCK), new Object[]{"CCC","CBC","CCC",'C',Items.COOKIE,'B',CheeseBlocks.CHEESE_BLOCK});
-		GameRegistry.addRecipe(new ItemStack(Blocks.CRAFTING_TABLE), new Object[]{"WWW","WCW","WWW",'C',CheeseBlocks.CHEESE_CRAFTING_TABLE,'W',Blocks.PLANKS});
+		GameRegistry.addRecipe(new ItemStack(Blocks.CRAFTING_TABLE), new Object[]{"SS","PP",'P',Blocks.PLANKS,'S',new ItemStack(Blocks.WOOL)});
 		GameRegistry.addRecipe(new ItemStack(Blocks.FURNACE), new Object[]{"SSS","SCS","SSS",'C',CheeseBlocks.CHEESE_FURNACE,'S',Blocks.COBBLESTONE});
 		
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.BREAD_CHEESE), new Object[]{" B "," C "," B ",'C',CheeseItems.CHEESE,'B',Items.BREAD});
@@ -42,6 +42,7 @@ public class CheeseCraftingAndSmelting {
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_HOE), new Object[]{"CC "," S "," S ",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_FLY_STICK), new Object[]{"CCC","CSC"," S ",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_MULTITOOL), new Object[]{"ASP"," T "," T ",'S',CheeseItems.CHEESE_SHOVEL_HEAD,'A',CheeseItems.CHEESE_AXE_HEAD,'P',CheeseItems.CHEESE_PICKAXE_HEAD,'T',Items.STICK});
+		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_BOW), new Object[]{" ST","SCT"," ST",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK,'T',Items.STRING});
 		
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_SHOVEL_HEAD), new Object[]{" C ",'C',CheeseItems.CHEESE_INGOT});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_AXE_HEAD), new Object[]{"CC ","C  ",'C',CheeseItems.CHEESE_INGOT});
