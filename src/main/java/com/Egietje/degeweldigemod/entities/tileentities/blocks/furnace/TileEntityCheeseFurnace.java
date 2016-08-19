@@ -3,6 +3,7 @@ package com.Egietje.degeweldigemod.entities.tileentities.blocks.furnace;
 import javax.annotation.Nullable;
 
 import com.Egietje.degeweldigemod.blocks.CheeseFurnace;
+import com.Egietje.degeweldigemod.init.CheeseItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFurnace;
@@ -219,7 +220,7 @@ public class TileEntityCheeseFurnace extends TileEntityLockable implements ITick
 	}
 
 	public int getCookTime(@Nullable ItemStack stack) {
-		return 150;
+		return 300;
 	}
 
 	private boolean canSmelt() {
@@ -313,6 +314,10 @@ public class TileEntityCheeseFurnace extends TileEntityLockable implements ITick
 				return 100;
 			if (item == Items.BLAZE_ROD)
 				return 2400;
+			if (item == CheeseItems.CHEESE)
+				return 200;
+			if (item == CheeseItems.CHEESE_SEEDS)
+				return 200;
 			return net.minecraftforge.fml.common.registry.GameRegistry.getFuelValue(stack);
 		}
 	}
