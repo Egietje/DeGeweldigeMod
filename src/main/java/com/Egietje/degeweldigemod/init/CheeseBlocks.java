@@ -41,7 +41,7 @@ public class CheeseBlocks {
 		CHEESE_ORE_END = new CheeseOreEnd().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
 		CHEESE_BLOCK = new Block(Material.ROCK).setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(3F);
 		QUICK_CHEESE = new QuickCheese().setHardness(4F);
-		COMPLIMENT_MACHINE = new ComplimentsMachine().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(3F);
+		COMPLIMENT_MACHINE = new ComplimentMachine().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(3F);
 		BELGIUM_FLAG = new BelgiumFlag().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
 		CHEESE_PLANT = new CheesePlant();
 		CHEESE_FURNACE = new CheeseFurnace(false).setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
