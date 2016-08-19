@@ -2,6 +2,8 @@ package com.Egietje.degeweldigemod.gui;
 
 import java.io.IOException;
 
+import com.Egietje.degeweldigemod.blocks.CheeseCookieBlock;
+
 import javafx.scene.paint.Color;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -16,13 +18,18 @@ import net.minecraftforge.fml.client.config.GuiSlider;
 
 public class CheeseCookieGui extends GuiScreen {
 	
-	public GuiSlider cookies;
+	public static GuiSlider cookies;
 	public boolean slider = false;
+	public EntityPlayer player = Minecraft.getMinecraft().thePlayer;
+	public static boolean cookiesC = false;
+	public static boolean cookiesS = false;
 	@Override
 	public void initGui() {
 		slider = false;
+		cookiesC = false;
+		cookiesS = false;
 		buttonList.add(new GuiButtonExt(1, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Goed geopend!"));
-		cookies = new GuiSlider(8, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Ik wil ", " koekjes", 1, 10, 5, true, true);
+		cookies = new GuiSlider(8, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Ik wil ", " koekjes", 1, 50, 1, true, true);
 	}
 	
 	@Override
@@ -72,18 +79,23 @@ public class CheeseCookieGui extends GuiScreen {
 		case 10 :
 			buttonList.removeAll(buttonList);
 			slider = false;
-			if(!Minecraft.getMinecraft().thePlayer.isCreative()) {
-				if(Minecraft.getMinecraft().thePlayer.experienceLevel > 3 * cookies.getValueInt()) {
-					Minecraft.getMinecraft().thePlayer.inventory.addItemStackToInventory(new ItemStack(Items.COOKIE, cookies.getValueInt()));
-					Minecraft.getMinecraft().thePlayer.removeExperienceLevel(3 * cookies.getValueInt());
-					this.mc.displayGuiScreen((GuiScreen)null);
+			if(!player.isCreative()) {
+				if(player.experienceLevel >= 3 * cookies.getValueInt()) {
+					cookiesS = true;
+					buttonList.add(new GuiButtonExt(11, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Alsjeblieft"));
 				} else {
 					buttonList.add(new GuiButtonExt(7, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Je hebt niet genoeg xp"));
 				}
 			} else {
-				Minecraft.getMinecraft().thePlayer.inventory.addItemStackToInventory(new ItemStack(Items.COOKIE, cookies.getValueInt()));
-				this.mc.displayGuiScreen((GuiScreen)null);
+				cookiesC = true;
+				buttonList.add(new GuiButtonExt(11, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Alsjeblieft"));
 			}
+			break;
+		case 11 :
+			CheeseCookieBlock.remove();
+			cookiesC = false;
+			cookiesS = false;
+			this.mc.displayGuiScreen((GuiScreen)null);
 			break;
 		}
 	}
