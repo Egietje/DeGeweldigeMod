@@ -32,7 +32,6 @@ public class CheeseCraftingAndSmelting {
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_APPLE), new Object[]{" C ","CAC"," C ",'C',CheeseItems.CHEESE,'A',Items.APPLE});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_SEEDS), new Object[]{" C ","CSC"," C ",'C',CheeseItems.CHEESE,'S',Items.WHEAT_SEEDS});
 		
-		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_INGOT), new Object[]{"CCC","CCC",'C',CheeseItems.CHEESE});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_ARROW), new Object[]{"C","S","F",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK,'F',Items.FEATHER});
 		
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_SWORD), new Object[]{" C "," C "," S ",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK});
@@ -54,6 +53,9 @@ public class CheeseCraftingAndSmelting {
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_BOOTS), new Object[]{"C C","C C",'C',CheeseItems.CHEESE_INGOT});
 		
 		GameRegistry.addSmelting(CheeseItems.CHEESE, new ItemStack(CheeseItems.CHEESE_COOKED), 4.2F);
+		GameRegistry.addSmelting(CheeseBlocks.CHEESE_ORE, new ItemStack(CheeseItems.CHEESE_INGOT), 3.6F);
+		GameRegistry.addSmelting(CheeseBlocks.CHEESE_ORE_NETHER, new ItemStack(CheeseItems.CHEESE_INGOT), 3.6F);
+		GameRegistry.addSmelting(CheeseBlocks.CHEESE_ORE_END, new ItemStack(CheeseItems.CHEESE_INGOT), 3.6F);
 	}
 	
 	private void unregister() {
