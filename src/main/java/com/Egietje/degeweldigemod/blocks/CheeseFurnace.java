@@ -4,7 +4,7 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import com.Egietje.degeweldigemod.entities.tileentities.blocks.furnace.TileEntityCheeseFurnace;
+import com.Egietje.degeweldigemod.entities.tileentities.blocks.TileEntityCheeseFurnace;
 import com.Egietje.degeweldigemod.init.CheeseBlocks;
 
 

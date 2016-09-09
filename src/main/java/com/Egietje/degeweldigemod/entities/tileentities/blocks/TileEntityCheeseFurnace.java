@@ -1,4 +1,4 @@
-package com.Egietje.degeweldigemod.entities.tileentities.blocks.furnace;
+package com.Egietje.degeweldigemod.entities.tileentities.blocks;
 
 import javax.annotation.Nullable;
 

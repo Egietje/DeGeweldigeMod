@@ -3,7 +3,7 @@ package com.Egietje.degeweldigemod.init;
 import com.Egietje.degeweldigemod.DeGeweldigeMod;
 import com.Egietje.degeweldigemod.entities.cheesearrow.EntityCheeseArrow;
 import com.Egietje.degeweldigemod.entities.cheesecow.EntityCheeseCow;
-import com.Egietje.degeweldigemod.entities.tileentities.blocks.furnace.TileEntityCheeseFurnace;
+import com.Egietje.degeweldigemod.entities.tileentities.blocks.TileEntityCheeseFurnace;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Iterators;
 

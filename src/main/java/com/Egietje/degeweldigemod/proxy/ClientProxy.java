@@ -14,6 +14,8 @@ import com.Egietje.degeweldigemod.DeGeweldigeMod;
 import com.Egietje.degeweldigemod.Reference;
 import com.Egietje.degeweldigemod.entities.cheesearrow.*;
 import com.Egietje.degeweldigemod.entities.cheesecow.*;
+import com.Egietje.degeweldigemod.entities.tileentities.blocks.TileEntityCheeseBoard;
+import com.Egietje.degeweldigemod.entities.tileentities.render.RenderCheeseBoard;
 import com.Egietje.degeweldigemod.handler.CheeseClientHandler;
 import com.Egietje.degeweldigemod.handler.CheeseCommonHandler;
 import com.Egietje.degeweldigemod.init.CheeseBlocks;
@@ -39,8 +41,10 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.fml.relauncher.Side;
 
@@ -88,10 +92,14 @@ public class ClientProxy extends CommonProxy {
 		registerBlockModel(CheeseBlocks.LIT_CHEESE_FURNACE, 0);
 		registerBlockModel(CheeseBlocks.CHEESE_CRAFTING_TABLE, 0);
 		registerBlockModel(CheeseBlocks.CHEESE_COOKIE_BLOCK, 0);
+		registerBlockModel(CheeseBlocks.CHEESE_BOARD, 0);
 	}
 	
 	public void registerEventHandler() {
-		Display.setTitle("Minecraft - 1.10.2 | DeGeweldigeMod - " + Reference.VERSION);
+		Display.setTitle("Minecraft - " + Minecraft.getMinecraft().getVersion() + " | DeGeweldigeMod - " + Reference.VERSION);
+		
+		GameRegistry.registerTileEntity(TileEntityCheeseBoard.class, Reference.MODID + "TileEntityCheeseBoard");
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCheeseBoard.class, new RenderCheeseBoard());
 		
 		MinecraftForge.EVENT_BUS.register(new CheeseClientHandler());
 	}

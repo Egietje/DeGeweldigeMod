@@ -41,6 +41,7 @@ tile.cheese_crafting_table.name=§eCheese Crafting Table§r
 tile.cheese_furnace.name=§eCheese Furnace§r
 tile.lit_cheese_furnace.name=§eLit Cheese Furnace§r
 tile.cheese_cookie_block.name=§eCheese Cookie Block§r
+tile.cheese_board.name=§eCheese Board§r
 
 achievement.join=§eJoined§r
 achievement.join.desc=§6Join the world!§r
@@ -48,7 +49,6 @@ achievement.fly=§eFLY!§r
 achievement.fly.desc=§6Fly with the fly stick§r
 
 entity.dgm.CheeseCow.name=§eCheese Cow§r
-entity.dgm.CheeseChicken.name=§eCheese Chicken§r
 entity.dgm.CheeseArrow.name=§eCheese Arrow§r
 
 generator.Cheese=§eCheese§r

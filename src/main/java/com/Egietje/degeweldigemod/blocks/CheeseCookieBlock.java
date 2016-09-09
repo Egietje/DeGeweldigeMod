@@ -3,6 +3,7 @@ package com.Egietje.degeweldigemod.blocks;
 import com.Egietje.degeweldigemod.DeGeweldigeMod;
 import com.Egietje.degeweldigemod.gui.CheeseCookieGui;
 import com.Egietje.degeweldigemod.handler.CheeseGuiHandler;
+import com.Egietje.degeweldigemod.init.CheeseAchievements;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -32,9 +33,11 @@ public class CheeseCookieBlock extends Block {
 	public static void remove() {
 		if(CheeseCookieGui.cookiesC) {
 			player.inventory.addItemStackToInventory(new ItemStack(Items.COOKIE, CheeseCookieGui.cookies.getValueInt()));
+			player.addStat(CheeseAchievements.COOKIE);
 		} else if(CheeseCookieGui.cookiesS) {
 			player.inventory.addItemStackToInventory(new ItemStack(Items.COOKIE, CheeseCookieGui.cookies.getValueInt()));
 			player.removeExperienceLevel(3 * CheeseCookieGui.cookies.getValueInt());
+			player.addStat(CheeseAchievements.COOKIE);
 		}
 	}
 

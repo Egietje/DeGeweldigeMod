@@ -4,12 +4,17 @@ import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import org.lwjgl.opengl.Display;
+
+import com.Egietje.degeweldigemod.Reference;
 import com.Egietje.degeweldigemod.init.CheeseAchievements;
 import com.Egietje.degeweldigemod.init.CheeseItems;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.entity.RenderPlayer;
@@ -20,7 +25,6 @@ import net.minecraft.util.text.TextFormatting;
 
 @SideOnly(Side.CLIENT)
 public class CheeseClientHandler {
-	
 	
 	@SubscribeEvent
 	public void onPlayerJoin(PlayerLoggedInEvent event) {
