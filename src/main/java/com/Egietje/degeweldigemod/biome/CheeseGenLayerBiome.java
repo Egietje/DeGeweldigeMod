@@ -32,21 +32,11 @@ public class CheeseGenLayerBiome extends GenLayer {
 		}
 
 		int desertIdx = net.minecraftforge.common.BiomeManager.BiomeType.DESERT.ordinal();
-
-		biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(Biomes.DESERT, 30));
-		biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(Biomes.SAVANNA, 20));
-		biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(Biomes.PLAINS, 10));
-		biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(CheeseBiomes.CHEESE, 40));
+		biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(CheeseBiomes.CHEESE_BIOME, 40));
 
 		if (p_i45560_4_ == WorldType.DEFAULT_1_1) {
 			biomes[desertIdx].clear();
-			biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(Biomes.DESERT, 10));
-			biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(Biomes.FOREST, 10));
-			biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(Biomes.EXTREME_HILLS, 10));
-			biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(Biomes.SWAMPLAND, 10));
-			biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(Biomes.PLAINS, 10));
-			biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(Biomes.TAIGA, 10));
-			biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(CheeseBiomes.CHEESE, 15));
+			biomes[desertIdx].add(new net.minecraftforge.common.BiomeManager.BiomeEntry(CheeseBiomes.CHEESE_BIOME, 15));
 			this.settings = null;
 		} else if (p_i45560_4_ == WorldType.CUSTOMIZED) {
 			this.settings = ChunkProviderSettings.Factory.jsonToFactory(p_i45560_5_).build();

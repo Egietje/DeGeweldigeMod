@@ -1,18 +1,19 @@
 package com.Egietje.degeweldigemod.init;
 
+import com.Egietje.degeweldigemod.Reference;
 import com.Egietje.degeweldigemod.biome.BiomeCheese;
 
-import net.minecraft.init.Biomes;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomePlains;
-import net.minecraftforge.common.BiomeDictionary;
+import net.minecraft.world.biome.Biome.BiomeProperties;
 import net.minecraftforge.common.BiomeManager;
-import net.minecraftforge.common.BiomeDictionary.Type;
+import net.minecraftforge.common.BiomeManager.BiomeEntry;
+import net.minecraftforge.common.BiomeManager.BiomeType;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CheeseBiomes {
 	
-	public static Biome CHEESE;
+	public static Biome CHEESE_BIOME;
 	
 	public CheeseBiomes() {
 		initBiome();
@@ -20,12 +21,12 @@ public class CheeseBiomes {
 	}
 	
 	public static void initBiome() {
-		CHEESE = new BiomeCheese(137 ,new Biome.BiomeProperties(TextFormatting.YELLOW + "Cheese" + TextFormatting.RESET).setBaseHeight(0.125F).setHeightVariation(0.05F).setTemperature(1.2F).setRainfall(0.7F));
+		CHEESE_BIOME = new BiomeCheese(new BiomeProperties(TextFormatting.YELLOW + "Cheese" + TextFormatting.RESET).setWaterColor(0xD6FF42)).setRegistryName(Reference.MODID, "cheese_biome");
 	}
 	
 	public static void registerBiome() {
-		BiomeDictionary.registerBiomeType(CHEESE, Type.PLAINS);
-		BiomeManager.addSpawnBiome(CHEESE);
+		BiomeManager.addBiome(BiomeType.WARM, new BiomeEntry(CHEESE_BIOME, 3));
+		GameRegistry.register(CHEESE_BIOME);
 	}
 	
 }

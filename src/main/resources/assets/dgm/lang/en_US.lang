@@ -42,6 +42,8 @@ tile.cheese_furnace.name=§eCheese Furnace§r
 tile.lit_cheese_furnace.name=§eLit Cheese Furnace§r
 tile.cheese_cookie_block.name=§eCheese Cookie Block§r
 tile.cheese_board.name=§eCheese Board§r
+tile.cheese_grass.name=§eCheese Grass§r
+tile.cheese_dirt.name=§eCheese Dirt§r
 
 achievement.join=§eJoined§r
 achievement.join.desc=§6Join the world!§r

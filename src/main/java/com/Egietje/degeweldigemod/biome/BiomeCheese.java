@@ -3,25 +3,41 @@ package com.Egietje.degeweldigemod.biome;
 import java.util.Random;
 
 import com.Egietje.degeweldigemod.entities.cheesecow.EntityCheeseCow;
+import com.Egietje.degeweldigemod.init.CheeseBlocks;
 
 import net.minecraft.block.BlockDoublePlant;
 import net.minecraft.block.BlockFlower;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.init.Biomes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BiomeCheese extends Biome {
 
-	public BiomeCheese(int par1, Biome.BiomeProperties properties) {
+	public BiomeCheese(Biome.BiomeProperties properties) {
 		super(properties);
 		this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityCheeseCow.class, 8, 4, 4));
-		this.theBiomeDecorator.treesPerChunk = 0;
+		this.theBiomeDecorator.treesPerChunk = 1;
 		this.theBiomeDecorator.field_189870_A = 0.05F;
-		this.theBiomeDecorator.flowersPerChunk = 4;
-		this.theBiomeDecorator.grassPerChunk = 10;
+		this.theBiomeDecorator.flowersPerChunk = 5;
+		this.theBiomeDecorator.grassPerChunk = 7;
+		this.topBlock = CheeseBlocks.CHEESE_GRASS.getDefaultState();
+		this.fillerBlock = CheeseBlocks.CHEESE_DIRT.getDefaultState();
+	}
+	
+	@Override
+	public int getGrassColorAtPos(BlockPos pos) {
+		return 0xD6FF42;
+	}
+	
+	@Override
+	public int getFoliageColorAtPos(BlockPos pos) {
+		return 0xD6FF42;
 	}
 
 	public BlockFlower.EnumFlowerType pickRandomFlower(Random rand, BlockPos pos) {

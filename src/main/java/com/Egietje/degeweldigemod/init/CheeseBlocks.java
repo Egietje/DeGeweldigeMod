@@ -5,6 +5,7 @@ import com.Egietje.degeweldigemod.Reference;
 import com.Egietje.degeweldigemod.blocks.*;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockGrass;
 import net.minecraft.block.BlockPortal;
 import net.minecraft.block.BlockWorkbench;
 import net.minecraft.block.material.Material;
@@ -30,6 +31,8 @@ public class CheeseBlocks {
 	public static Block CHEESE_CRAFTING_TABLE;
 	public static Block CHEESE_COOKIE_BLOCK;
 	public static Block CHEESE_BOARD;
+	public static Block CHEESE_GRASS;
+	public static Block CHEESE_DIRT;
 	
 	public CheeseBlocks() {
 		init();
@@ -50,6 +53,8 @@ public class CheeseBlocks {
 		CHEESE_CRAFTING_TABLE = new CheeseWorkbench().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
 		CHEESE_COOKIE_BLOCK = new CheeseCookieBlock().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
 		CHEESE_BOARD = new CheeseBoard().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
+		CHEESE_GRASS = new CheeseGrass().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(0.5F);
+		CHEESE_DIRT = new CheeseDirt().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(0.75F);
 		
 		CheeseUtils.setNames(CHEESE_ORE, "cheese_ore");
 		CheeseUtils.setNames(CHEESE_ORE_NETHER, "cheese_ore_nether");
@@ -64,6 +69,8 @@ public class CheeseBlocks {
 		CheeseUtils.setNames(CHEESE_CRAFTING_TABLE, "cheese_crafting_table");
 		CheeseUtils.setNames(CHEESE_COOKIE_BLOCK, "cheese_cookie_block");
 		CheeseUtils.setNames(CHEESE_BOARD, "cheese_board");
+		CheeseUtils.setNames(CHEESE_GRASS, "cheese_grass");
+		CheeseUtils.setNames(CHEESE_DIRT, "cheese_dirt");
 	}	
 	
 	public void register() {
@@ -80,6 +87,8 @@ public class CheeseBlocks {
 		this.registerBlock(CHEESE_CRAFTING_TABLE);
 		this.registerBlock(CHEESE_COOKIE_BLOCK);
 		this.registerBlock(CHEESE_BOARD);
+		this.registerBlock(CHEESE_GRASS);
+		this.registerBlock(CHEESE_DIRT);
 	}	
 	
 	private void registerBlock(Block block) {
