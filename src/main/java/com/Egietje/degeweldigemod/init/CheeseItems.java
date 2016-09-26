@@ -65,33 +65,33 @@ public class CheeseItems {
 		
 		cheese_armor_material = EnumHelper.addArmorMaterial("cheese_armor_material", "", 22, new int[] {3, 6, 8, 3}, 17, SoundEvents.BLOCK_SLIME_BREAK, 3);
 		
-		CHEESE_HELMET = new CheeseArmor(cheese_armor_material, EntityEquipmentSlot.HEAD).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_CHESTPLATE = new CheeseArmor(cheese_armor_material, EntityEquipmentSlot.CHEST).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_LEGGINGS = new CheeseArmor(cheese_armor_material, EntityEquipmentSlot.LEGS).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_BOOTS = new CheeseArmor(cheese_armor_material, EntityEquipmentSlot.FEET).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
+		CHEESE_HELMET = new CheeseArmor(cheese_armor_material, EntityEquipmentSlot.HEAD).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_CHESTPLATE = new CheeseArmor(cheese_armor_material, EntityEquipmentSlot.CHEST).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_LEGGINGS = new CheeseArmor(cheese_armor_material, EntityEquipmentSlot.LEGS).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_BOOTS = new CheeseArmor(cheese_armor_material, EntityEquipmentSlot.FEET).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
 		
-		CHEESE_SWORD = new CheeseSword(cheese_tool_material).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_PICKAXE = new CheesePickaxe(cheese_tool_material).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_AXE = new CheeseAxe(cheese_tool_material).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_SHOVEL = new CheeseSpade(cheese_tool_material).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_HOE = new CheeseHoe(cheese_tool_material).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_FLY_STICK = new CheeseFlyStick().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_BOW = new CheeseBow().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_MULTITOOL = new CheeseMultitool(cheese_tool_material, 4671).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
+		CHEESE_SWORD = new CheeseSword(cheese_tool_material).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_PICKAXE = new CheesePickaxe(cheese_tool_material).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_AXE = new CheeseAxe(cheese_tool_material).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_SHOVEL = new CheeseSpade(cheese_tool_material).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_HOE = new CheeseHoe(cheese_tool_material).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_FLY_STICK = new CheeseFlyStick().setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_BOW = new CheeseBow().setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_MULTITOOL = new CheeseMultitool(cheese_tool_material, 4671).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
 		
-		CHEESE_PICKAXE_HEAD = new Item().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_AXE_HEAD = new Item().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_SHOVEL_HEAD = new Item().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
+		CHEESE_PICKAXE_HEAD = new Item().setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_AXE_HEAD = new Item().setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_SHOVEL_HEAD = new Item().setCreativeTab(CheeseTabs.CHEESE_ITEMS);
 		
-		CHEESE = new ItemFood(4, 0.8F, false).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_COOKED = new ItemFood(7, 1.3F, true).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		BREAD_CHEESE = new ItemFood(15, 1.7F, true).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_APPLE = new CheeseApple().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_BUCKET = new CheeseBucket().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_SEEDS = new ItemSeeds(CheeseBlocks.CHEESE_PLANT, Blocks.FARMLAND).setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
+		CHEESE = new ItemFood(4, 0.8F, false).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_COOKED = new ItemFood(7, 1.3F, true).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		BREAD_CHEESE = new ItemFood(15, 1.7F, true).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_APPLE = new CheeseApple().setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_BUCKET = new CheeseBucket().setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_SEEDS = new ItemSeeds(CheeseBlocks.CHEESE_PLANT, Blocks.FARMLAND).setCreativeTab(CheeseTabs.CHEESE_ITEMS);
 		
-		CHEESE_INGOT = new Item().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
-		CHEESE_ARROW = new CheeseArrow().setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
+		CHEESE_INGOT = new Item().setCreativeTab(CheeseTabs.CHEESE_ITEMS);
+		CHEESE_ARROW = new CheeseArrow().setCreativeTab(CheeseTabs.CHEESE_ITEMS);
 		
 		CheeseUtils.setNames(CHEESE, "cheese");
 		CheeseUtils.setNames(CHEESE_COOKED, "cheese_cooked");

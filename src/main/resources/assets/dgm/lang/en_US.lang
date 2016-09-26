@@ -26,7 +26,8 @@ item.cheese_axe_head.name=§eCheese Axe Head§r
 item.cheese_pickaxe_head.name=§eCheese Pickaxe Head§r
 item.cheese_shovel_head.name=§eCheese Shovel Head§r
 
-itemGroup.tabCheeseStuff=§eCheese Stuff§r
+itemGroup.cheese_items=§eCheese Items§r
+itemGroup.cheese_blocks=§eCheese Blocks§r
 
 container.cheese_furnace=§eCheese Furnace§r
 
@@ -44,6 +45,9 @@ tile.cheese_cookie_block.name=§eCheese Cookie Block§r
 tile.cheese_board.name=§eCheese Board§r
 tile.cheese_grass.name=§eCheese Grass§r
 tile.cheese_dirt.name=§eCheese Dirt§r
+tile.cheese_grass_path.name=§eCheese Grass Path§r
+tile.cheese_farm_land.name=§eCheese Farm Land§r
+tile.cheese_stairs.name=§eCheese Stairs§r
 
 achievement.join=§eJoined§r
 achievement.join.desc=§6Join the world!§r

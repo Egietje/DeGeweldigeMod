@@ -21,6 +21,7 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
 
 public class CheeseMultitool extends ItemTool {
 
@@ -101,6 +102,17 @@ public class CheeseMultitool extends ItemTool {
 			if (facing != EnumFacing.DOWN && worldIn.getBlockState(pos.up()).getMaterial() == Material.AIR
 					&& block == Blocks.GRASS) {
 				IBlockState iblockstate1 = Blocks.GRASS_PATH.getDefaultState();
+				worldIn.playSound(playerIn, pos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
+
+				if (!worldIn.isRemote) {
+					worldIn.setBlockState(pos, iblockstate1, 11);
+					stack.damageItem(1, playerIn);
+				}
+
+				return EnumActionResult.SUCCESS;
+			} else if (facing != EnumFacing.DOWN && worldIn.getBlockState(pos.up()).getMaterial() == Material.AIR
+					&& block == CheeseBlocks.CHEESE_GRASS) {
+				IBlockState iblockstate1 = CheeseBlocks.CHEESE_GRASS_PATH.getDefaultState();
 				worldIn.playSound(playerIn, pos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
 				if (!worldIn.isRemote) {

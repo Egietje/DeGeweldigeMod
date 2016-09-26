@@ -33,6 +33,9 @@ public class CheeseBlocks {
 	public static Block CHEESE_BOARD;
 	public static Block CHEESE_GRASS;
 	public static Block CHEESE_DIRT;
+	public static Block CHEESE_GRASS_PATH;
+	public static Block CHEESE_FARM_LAND;
+	public static Block CHEESE_STAIRS;
 	
 	public CheeseBlocks() {
 		init();
@@ -40,21 +43,24 @@ public class CheeseBlocks {
 	}
 	
 	public static void init() {
-		CHEESE_ORE = new CheeseOre().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
-		CHEESE_ORE_NETHER = new CheeseOreNether().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
-		CHEESE_ORE_END = new CheeseOreEnd().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
-		CHEESE_BLOCK = new Block(Material.ROCK).setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(3F);
-		QUICK_CHEESE = new QuickCheese().setHardness(4F);
-		COMPLIMENT_MACHINE = new ComplimentMachine().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(3F);
-		BELGIUM_FLAG = new BelgiumFlag().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
+		CHEESE_ORE = new CheeseOre().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(2F);
+		CHEESE_ORE_NETHER = new CheeseOreNether().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(2F);
+		CHEESE_ORE_END = new CheeseOreEnd().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(2F);
+		CHEESE_BLOCK = new Block(Material.ROCK).setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(3F);
+		QUICK_CHEESE = new QuickCheese().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(4F);
+		COMPLIMENT_MACHINE = new ComplimentMachine().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(3F);
+		BELGIUM_FLAG = new BelgiumFlag().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(2F);
 		CHEESE_PLANT = new CheesePlant();
-		CHEESE_FURNACE = new CheeseFurnace(false).setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
+		CHEESE_FURNACE = new CheeseFurnace(false).setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(2F);
 		LIT_CHEESE_FURNACE = new CheeseFurnace(true).setHardness(2F);
-		CHEESE_CRAFTING_TABLE = new CheeseWorkbench().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
-		CHEESE_COOKIE_BLOCK = new CheeseCookieBlock().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
-		CHEESE_BOARD = new CheeseBoard().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(2F);
-		CHEESE_GRASS = new CheeseGrass().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(0.5F);
-		CHEESE_DIRT = new CheeseDirt().setCreativeTab(DeGeweldigeMod.tabCheeseStuff).setHardness(0.75F);
+		CHEESE_CRAFTING_TABLE = new CheeseWorkbench().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(2F);
+		CHEESE_COOKIE_BLOCK = new CheeseCookieBlock().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(2F);
+		CHEESE_BOARD = new CheeseBoard().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(2F);
+		CHEESE_GRASS = new CheeseGrass().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(0.5F).setResistance(0.5F);
+		CHEESE_DIRT = new CheeseDirt().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(0.75F).setResistance(0.5F);
+		CHEESE_GRASS_PATH = new CheeseGrassPath().setHardness(0.625F).setResistance(0.5F);
+		CHEESE_FARM_LAND = new CheeseFarmLand().setHardness(0.625F).setResistance(0.5F);
+		CHEESE_STAIRS = new CheeseStairs().setCreativeTab(CheeseTabs.CHEESE_BLOCKS).setHardness(2.5F);
 		
 		CheeseUtils.setNames(CHEESE_ORE, "cheese_ore");
 		CheeseUtils.setNames(CHEESE_ORE_NETHER, "cheese_ore_nether");
@@ -71,6 +77,9 @@ public class CheeseBlocks {
 		CheeseUtils.setNames(CHEESE_BOARD, "cheese_board");
 		CheeseUtils.setNames(CHEESE_GRASS, "cheese_grass");
 		CheeseUtils.setNames(CHEESE_DIRT, "cheese_dirt");
+		CheeseUtils.setNames(CHEESE_GRASS_PATH, "cheese_grass_path");
+		CheeseUtils.setNames(CHEESE_FARM_LAND, "cheese_farm_land");
+		CheeseUtils.setNames(CHEESE_STAIRS, "cheese_stairs");
 	}	
 	
 	public void register() {
@@ -89,6 +98,9 @@ public class CheeseBlocks {
 		this.registerBlock(CHEESE_BOARD);
 		this.registerBlock(CHEESE_GRASS);
 		this.registerBlock(CHEESE_DIRT);
+		this.registerBlock(CHEESE_GRASS_PATH);
+		this.registerBlock(CHEESE_FARM_LAND);
+		this.registerBlock(CHEESE_STAIRS);
 	}	
 	
 	private void registerBlock(Block block) {

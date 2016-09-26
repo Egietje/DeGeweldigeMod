@@ -25,7 +25,6 @@ public class CheeseBucket extends ItemFood {
 	public CheeseBucket() {
 		super(3, 2.3F, false);
 		this.setMaxStackSize(1);
-		this.setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
 	}
 	
 	@Override

@@ -33,6 +33,9 @@ public class EntityCheeseArrow extends EntityArrow {
 		super.onUpdate();
 		if (this.worldObj.isRemote && !this.inGround) {
 			this.worldObj.spawnParticle(EnumParticleTypes.END_ROD, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+		} else if (!this.worldObj.isRemote && this.inGround) {
+			worldObj.createExplosion(shootingEntity, this.posX, this.posY, this.posZ, 1.0F, true);
+			this.setDead();
 		}
 	}
 	
@@ -46,7 +49,7 @@ public class EntityCheeseArrow extends EntityArrow {
 		super.arrowHit(living);
 		World world = living.getEntityWorld();
 		if(living != shootingEntity) {
-			world.createExplosion(shootingEntity, living.posX, living.posY, living.posZ, 4.0F, true);
+			world.createExplosion(shootingEntity, living.posX, living.posY, living.posZ, 1.0F, true);
 		}
 	}
 }

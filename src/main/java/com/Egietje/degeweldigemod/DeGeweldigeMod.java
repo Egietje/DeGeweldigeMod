@@ -1,10 +1,11 @@
 package com.Egietje.degeweldigemod;
 
-import com.Egietje.degeweldigemod.biome.WorldTypeCheese;
 import com.Egietje.degeweldigemod.entities.*;
 import com.Egietje.degeweldigemod.handler.*;
 import com.Egietje.degeweldigemod.init.*;
 import com.Egietje.degeweldigemod.proxy.*;
+import com.Egietje.degeweldigemod.world.biome.WorldTypeCheese;
+import com.Egietje.degeweldigemod.world.gen.CheeseGeneration;
 
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityLiving;
@@ -14,6 +15,7 @@ import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.init.Biomes;
 import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.structure.MapGenVillage;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -29,7 +31,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, acceptedMinecraftVersions = "[1.10.2]")
 public class DeGeweldigeMod {
-	public static final CheeseTab tabCheeseStuff = new CheeseTab("tabCheeseStuff");
 	
 	@SidedProxy(clientSide = Reference.CLIENTPROXY, serverSide = Reference.COMMONPROXY)
 	public static CommonProxy proxy;
@@ -45,6 +46,7 @@ public class DeGeweldigeMod {
 		new CheeseAchievements();
 		new CheeseSpawnPlacementRegistry();
 		new CheeseBiomes();
+		new CheeseTabs();
 		proxy.registerModels();
 		proxy.renderEntities();
 	}

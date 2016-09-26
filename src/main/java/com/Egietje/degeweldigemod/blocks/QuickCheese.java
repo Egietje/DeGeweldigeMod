@@ -30,7 +30,6 @@ public class QuickCheese extends Block {
 
 	public QuickCheese() {
 		super(Material.WEB);
-		this.setCreativeTab(DeGeweldigeMod.tabCheeseStuff);
 	}
 
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {

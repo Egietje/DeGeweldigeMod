@@ -1,6 +1,8 @@
-package com.Egietje.degeweldigemod.init;
+package com.Egietje.degeweldigemod.world.gen;
 
 import java.util.Random;
+
+import com.Egietje.degeweldigemod.init.CheeseBlocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;

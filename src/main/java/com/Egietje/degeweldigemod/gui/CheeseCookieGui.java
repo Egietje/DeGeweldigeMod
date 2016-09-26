@@ -29,7 +29,7 @@ public class CheeseCookieGui extends GuiScreen {
 		cookiesC = false;
 		cookiesS = false;
 		buttonList.add(new GuiButtonExt(1, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Goed geopend!"));
-		cookies = new GuiSlider(8, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Ik wil ", " koekjes", 1, 50, 1, true, true);
+		cookies = new GuiSlider(8, width / 2 - 100, height / 4 + 42 + -16, 200, 20, "Ik wil ", " koekjes", 1, 64, 1, true, true);
 	}
 	
 	@Override

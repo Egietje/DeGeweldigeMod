@@ -26,4 +26,6 @@ public class CheeseAchievements {
 		COOKIE.registerStat();
 		AchievementPage.registerAchievementPage(new AchievementPage("Cheese Achievements", new Achievement[] { JOIN, FLY }));
 	}
+	
+	
 }

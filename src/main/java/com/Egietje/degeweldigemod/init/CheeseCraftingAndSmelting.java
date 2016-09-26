@@ -24,15 +24,17 @@ public class CheeseCraftingAndSmelting {
 		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_FURNACE), new Object[]{"CCC","CFC","CCC",'C',CheeseItems.CHEESE_INGOT,'F',Blocks.FURNACE});
 		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_CRAFTING_TABLE), new Object[]{"CC","CC",'C',CheeseItems.CHEESE_INGOT});
 		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_COOKIE_BLOCK), new Object[]{"CCC","CBC","CCC",'C',Items.COOKIE,'B',CheeseBlocks.CHEESE_BLOCK});
+		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_STAIRS, 6), new Object[]{"C  ","CC ","CCC",'C',CheeseBlocks.CHEESE_BLOCK});
+		GameRegistry.addRecipe(new ItemStack(CheeseBlocks.CHEESE_STAIRS, 6), new Object[]{"  C"," CC","CCC",'C',CheeseBlocks.CHEESE_BLOCK});
 		GameRegistry.addRecipe(new ItemStack(Blocks.CRAFTING_TABLE), new Object[]{"SS","PP",'P',Blocks.PLANKS,'S',new ItemStack(Blocks.WOOL)});
 		GameRegistry.addRecipe(new ItemStack(Blocks.FURNACE), new Object[]{"SSS","SCS","SSS",'C',CheeseBlocks.CHEESE_FURNACE,'S',Blocks.COBBLESTONE});
 		
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.BREAD_CHEESE), new Object[]{" B "," C "," B ",'C',CheeseItems.CHEESE,'B',Items.BREAD});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE, 9), new Object[]{"C",'C',CheeseBlocks.CHEESE_BLOCK});
-		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_APPLE), new Object[]{" C ","CAC"," C ",'C',CheeseItems.CHEESE,'A',Items.APPLE});
-		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_SEEDS), new Object[]{" C ","CSC"," C ",'C',CheeseItems.CHEESE,'S',Items.WHEAT_SEEDS});
+		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_APPLE), new Object[]{" C ","CAC"," C ",'C',CheeseItems.CHEESE,'A',Items.GOLDEN_APPLE});
+		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_SEEDS, 4), new Object[]{" C ","CSC"," C ",'C',CheeseItems.CHEESE,'S',Items.WHEAT_SEEDS});
 		
-		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_ARROW), new Object[]{"C","S","F",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK,'F',Items.FEATHER});
+		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_ARROW, 16), new Object[]{"TCT","S","F",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK,'F',Items.FEATHER,'T',Blocks.TNT});
 		
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_SWORD), new Object[]{" C "," C "," S ",'C',CheeseItems.CHEESE_INGOT,'S',Items.STICK});
 		GameRegistry.addRecipe(new ItemStack(CheeseItems.CHEESE_SHOVEL), new Object[]{" C "," S "," S ",'C',CheeseItems.CHEESE_SHOVEL_HEAD,'S',Items.STICK});

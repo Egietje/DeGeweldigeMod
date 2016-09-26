@@ -1,24 +1,36 @@
-package com.Egietje.degeweldigemod.biome;
+package com.Egietje.degeweldigemod.world.biome;
 
+import java.util.Map;
 import java.util.Random;
 
 import com.Egietje.degeweldigemod.entities.cheesecow.EntityCheeseCow;
 import com.Egietje.degeweldigemod.init.CheeseBlocks;
+import com.Egietje.degeweldigemod.world.gen.MapGenCheeseVillage;
+import com.Egietje.degeweldigemod.world.gen.StructureCheeseVillagePieces;
+import com.Egietje.degeweldigemod.world.gen.WorldGenCheeseHouse;
 
 import net.minecraft.block.BlockDoublePlant;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.passive.EntityHorse;
 import net.minecraft.init.Biomes;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.ChunkPos;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
+import net.minecraft.world.gen.feature.WorldGenDesertWells;
+import net.minecraft.world.gen.feature.WorldGenDoublePlant;
+import net.minecraft.world.gen.structure.MapGenStructure;
+import net.minecraft.world.gen.structure.StructureBoundingBox;
+import net.minecraft.world.gen.structure.StructureStart;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BiomeCheese extends Biome {
-
 	public BiomeCheese(Biome.BiomeProperties properties) {
 		super(properties);
 		this.spawnableCreatureList.add(new Biome.SpawnListEntry(EntityCheeseCow.class, 8, 4, 4));
@@ -68,23 +80,30 @@ public class BiomeCheese extends Biome {
 
 	public void decorate(World worldIn, Random rand, BlockPos pos) {
 		double d0 = GRASS_COLOR_NOISE.getValue((double) (pos.getX() + 8) / 200.0D, (double) (pos.getZ() + 8) / 200.0D);
-
-		if (d0 < -0.8D) {
-			this.theBiomeDecorator.flowersPerChunk = 15;
-			this.theBiomeDecorator.grassPerChunk = 5;
-		} else {
-			this.theBiomeDecorator.flowersPerChunk = 4;
-			this.theBiomeDecorator.grassPerChunk = 10;
-			DOUBLE_PLANT_GENERATOR.setPlantType(BlockDoublePlant.EnumPlantType.GRASS);
-
-			for (int i = 0; i < 7; ++i) {
-				int j = rand.nextInt(16) + 8;
-				int k = rand.nextInt(16) + 8;
-				int l = rand.nextInt(worldIn.getHeight(pos.add(j, 0, k)).getY() + 32);
-				DOUBLE_PLANT_GENERATOR.generate(worldIn, rand, pos.add(j, l, k));
-			}
+		final MapGenCheeseVillage CHEESE_VILLAGE_GENERATOR = new MapGenCheeseVillage();
+		final WorldGenCheeseHouse CHEESE_HOUSE_GENERATOR = new WorldGenCheeseHouse();
+		
+		if (rand.nextInt(1500) == 0) {
+			int i = rand.nextInt(16) + 8;
+            int j = rand.nextInt(16) + 8;
+            BlockPos blockpos = worldIn.getHeight(pos.add(i, 0, j)).up();
+            CHEESE_HOUSE_GENERATOR.generate(worldIn, rand, blockpos);
+			System.out.println("House generated at: X" + blockpos.getX() + ", Z" + blockpos.getZ());
+		} else if(rand.nextInt(1500) == 0) {
+			CHEESE_VILLAGE_GENERATOR.generateStructure(worldIn, rand, worldIn.getChunkFromBlockCoords(pos).getChunkCoordIntPair());
+			System.out.println("Village generated at: X" + pos.getX() + ", Z" + pos.getZ());
 		}
-
+		this.theBiomeDecorator.flowersPerChunk = 4;
+		this.theBiomeDecorator.grassPerChunk = 10;
+		DOUBLE_PLANT_GENERATOR.setPlantType(BlockDoublePlant.EnumPlantType.GRASS);
+		
+		for (int i = 0; i < 7; ++i) {
+			int j = rand.nextInt(16) + 8;
+			int k = rand.nextInt(16) + 8;
+			int l = rand.nextInt(worldIn.getHeight(pos.add(j, 0, k)).getY() + 32);
+			DOUBLE_PLANT_GENERATOR.generate(worldIn, rand, pos.add(j, l, k));
+		}
+		
 		super.decorate(worldIn, rand, pos);
 	}
 
